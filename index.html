@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TechNova — Portal Berita Teknologi</title>
+  <meta name="description" content="Portal berita teknologi terkini: AI, chip, gadget, software — kurasi singkat, akurat, dan enak dibaca." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f15; --panel:#0f1522; --muted:#99a3b3; --text:#e8eef9; --brand:#6cf1ff; --accent:#9a7bff; --ok:#40f99b;
+      --card:#0f1727; --glass:rgba(255,255,255,0.06); --line:rgba(255,255,255,0.08);
+      --shadow:0 10px 30px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 800px at 80% -10%, rgba(108,241,255,.20), transparent 50%), radial-gradient(1000px 700px at -10% 20%, rgba(154,123,255,.15), transparent 45%), var(--bg); color:var(--text); font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif}
+    a{color:var(--brand); text-decoration:none}
+    header{position:sticky; top:0; backdrop-filter:saturate(1.2) blur(10px); background:linear-gradient(180deg, rgba(15,21,34,.9), rgba(15,21,34,.6)); border-bottom:1px solid var(--line); z-index:50}
+    .wrap{max-width:1200px; margin:0 auto; padding:0 16px}
+    .nav{display:flex; align-items:center; justify-content:space-between; height:64px}
+    .logo{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.5px}
+    .logo-badge{width:34px; height:34px; border-radius:10px; background:linear-gradient(135deg,var(--brand),var(--accent)); box-shadow:0 6px 20px rgba(108,241,255,.25)}
+    .navlinks{display:flex; gap:18px; font-size:14px; color:var(--muted)}
+    .hero{position:relative; padding:42px 0 28px; border-bottom:1px solid var(--line); background:
+      radial-gradient(700px 280px at 40% 0%, rgba(64,249,155,.12), transparent 60%)}
+    .hero h1{font-size:34px; margin:0 0 8px; line-height:1.1}
+    .hero p{margin:0; color:var(--muted)}
+    .ticker{margin-top:18px; display:flex; gap:12px; align-items:center; font-family:"Roboto Mono",monospace; font-size:13px; color:#c6d3ff}
+    .pill{padding:6px 10px; border:1px solid var(--line); border-radius:999px; background:var(--glass)}
+    .grid{display:grid; gap:18px; grid-template-columns:repeat(12,1fr); padding:26px 0 48px}
+    .card{grid-column:span 12; background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:var(--shadow); display:grid; grid-template-columns:1fr; transition:.3s transform, .3s box-shadow}
+    .card:hover{transform:translateY(-4px); box-shadow:0 18px 40px rgba(0,0,0,.55)}
+    .thumb{position:relative; aspect-ratio:16/9; background:#0a0f18; overflow:hidden}
+    .thumb img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(1.05) contrast(1.05)}
+    .content{padding:16px}
+    .tagdate{display:flex; gap:10px; align-items:center; margin-bottom:8px}
+    .tag{font-size:12px; letter-spacing:.3px; padding:6px 8px; border-radius:999px; background:rgba(154,123,255,.15); color:#cdbbff; border:1px solid rgba(154,123,255,.25)}
+    .date{font-size:12px; color:var(--muted)}
+    h2{font-size:20px; margin:6px 0 8px}
+    .desc{color:#cdd6ea; font-size:14px; line-height:1.6; margin:0 0 14px}
+    .actions{display:flex; gap:10px; align-items:center; justify-content:space-between}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 12px; border-radius:12px; border:1px solid var(--line); background:linear-gradient(180deg, rgba(108,241,255,.12), rgba(108,241,255,.06)); color:var(--text); font-weight:600}
+    .btn:hover{filter:brightness(1.1)}
+    .meta{font-size:12px; color:var(--muted)}
+    footer{border-top:1px solid var(--line); padding:22px 0 34px; background:linear-gradient(180deg, rgba(15,21,34,.6), rgba(15,21,34,.9))}
+    @media(min-width:720px){
+      .card{grid-template-columns:5fr 7fr}
+      .card .thumb{grid-column:1; grid-row:1 / span 2}
+      .card .content{grid-column:2}
+    }
+    @media(min-width:900px){
+      .grid.two-up .card{grid-column:span 6}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="logo">
+        <div class="logo-badge"></div>
+        <div>TechNova <span style="color:var(--brand)">Portal</span></div>
+      </div>
+      <nav class="navlinks">
+        <a href="#ai">AI</a>
+        <a href="#chip">Chip</a>
+        <a href="#gadget">Gadget</a>
+        <a href="#software">Software</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Berita Teknologi Terkini — Ringkas, Padat, Akurat</h1>
+      <p>Kami mengkurasi kabar terbaru tentang AI, chip, gadget, dan software dari sumber tepercaya. Diperbarui: 20 Oktober 2025.</p>
+      <div class="ticker">
+        <span class="pill">⚡ AI</span>
+        <span class="pill">🧠 Chip</span>
+        <span class="pill">📱 Gadget</span>
+        <span class="pill">🛠️ Software</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div class="grid two-up">
+
+      <!-- Card 1: Arm -->
+      <article id="ai" class="card">
+        <div class="thumb">
+          <img alt="Arm Flexible Access AI dan Armv9 untuk edge AI" src="https://www.arm.com/-/media/arm-com/images/news/2025/arm-logo-dark.jpg?rev=123" />
+        </div>
+        <div class="content">
+          <div class="tagdate">
+            <span class="tag">AI & Chip</span><span class="date">20 Okt 2025</span>
+          </div>
+          <h2>Arm Perluas Akses Lisensi AI untuk Dorong On-Device AI</h2>
+          <p class="desc">Arm menambahkan platform Armv9 untuk edge AI ke program Flexible Access, memudahkan startup dan pembuat perangkat mengadopsi akselerasi AI langsung di perangkat. Langkah ini memperkuat posisi Arm di pasar on-device AI yang makin kompetitif.</p>
+          <div class="actions">
+            <a class="btn" href="https://www.reuters.com/business/arm-expands-ai-licensing-program-boost-on-device-ai-market-share-2025-10-20/" target="_blank" rel="noopener">Baca selengkapnya →</a>
+            <span class="meta">Sumber: Reuters</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: NVIDIA Blackwell wafer US -->
+      <article id="chip" class="card">
+        <div class="thumb">
+          <img alt="Wafer GPU NVIDIA Blackwell di fasilitas TSMC Arizona" src="https://images.tweaktown.com/news/1/0/8/3/5/3/nvidia-unveils-first-blackwell-chip-wafer-made-at-tsmc-arizona-pushes-made-in-usa-narrative_full.jpg" />
+        </div>
+        <div class="content">
+          <div class="tagdate">
+            <span class="tag">Chip</span><span class="date">20 Okt 2025</span>
+          </div>
+          <h2>NVIDIA Pamerkan Wafer Blackwell Pertama Buatan AS</h2>
+          <p class="desc">NVIDIA dan TSMC merayakan wafer GPU Blackwell pertama yang diproduksi di Arizona. Inisiatif ini menandai langkah penting menuju produksi volume “made in USA” untuk prosesor AI generasi terbaru.</p>
+          <div class="actions">
+            <a class="btn" href="https://www.tweaktown.com/news/108353/nvidia-unveils-first-blackwell-chip-wafer-made-at-tsmc-arizona-pushes-made-in-usa-narrative/index.html" target="_blank" rel="noopener">Baca selengkapnya →</a>
+            <span class="meta">Sumber: TweakTown</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: OpenAI x Broadcom -->
+      <article class="card">
+        <div class="thumb">
+          <img alt="Ilustrasi pusat data akselerator AI OpenAI-Broadcom" src="https://openai.com/content/images/2025/10/openai-broadcom-hero.jpg" />
+        </div>
+        <div class="content">
+          <div class="tagdate">
+            <span class="tag">AI</span><span class="date">13 Okt 2025</span>
+          </div>
+          <h2>OpenAI–Broadcom Kolaborasi 10 GW Akselerator AI</h2>
+          <p class="desc">OpenAI mengumumkan kerja sama strategis dengan Broadcom untuk merancang dan men-deploy akselerator AI custom dengan kapasitas hingga 10 gigawatt, mengintegrasikan pelajaran dari pengembangan model frontier langsung ke perangkat keras.</p>
+          <div class="actions">
+            <a class="btn" href="https://openai.com/index/openai-and-broadcom-announce-strategic-collaboration/" target="_blank" rel="noopener">Baca selengkapnya →</a>
+            <span class="meta">Sumber: OpenAI</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4: Apple M5 + iPad Pro -->
+      <article id="gadget" class="card">
+        <div class="thumb">
+          <img alt="Apple Silicon M5 dengan performa AI tinggi" src="https://www.apple.com/newsroom/images/product/iphone/standard/Apple-M5-chip-hero_big.jpg.large.jpg" />
+        </div>
+        <div class="content">
+          <div class="tagdate">
+            <span class="tag">Gadget & Chip</span><span class="date">15 Okt 2025</span>
+          </div>
+          <h2>Apple Umumkan Chip M5 & iPad Pro Bertenaga M5</h2>
+          <p class="desc">Apple memperkenalkan M5 dengan lompatan besar di performa AI dan efisiensi daya, diikuti iPad Pro baru yang mengklaim performa AI hingga beberapa kali lipat dari generasi sebelumnya.</p>
+          <div class="actions">
+            <a class="btn" href="https://www.apple.com/newsroom/2025/10/apple-unleashes-m5-the-next-big-leap-in-ai-performance-for-apple-silicon/" target="_blank" rel="noopener">M5 →</a>
+            <a class="btn" href="https://www.apple.com/newsroom/2025/10/apple-introduces-the-powerful-new-ipad-pro-with-the-m5-chip/" target="_blank" rel="noopener">iPad Pro →</a>
+            <span class="meta">Sumber: Apple Newsroom</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5: Intel Crescent Island -->
+      <article class="card">
+        <div class="thumb">
+          <img alt="GPU data center Intel untuk inference AI" src="https://www.intel.com/content/dam/www/central-libraries/us/en/images/2025-ocp-gpu-hero.jpg.rendition.intel.web.1920.1080.jpg" />
+        </div>
+        <div class="content">
+          <div class="tagdate">
+            <span class="tag">Data Center</span><span class="date">15 Okt 2025</span>
+          </div>
+          <h2>Intel Umumkan GPU “Crescent Island” untuk Inference</h2>
+          <p class="desc">Di OCP Global Summit, Intel mengungkap penambahan baru ke portofolio akselerator AI—GPU pusat data yang dioptimalkan untuk inference dengan memori besar dan efisiensi energi tinggi.</p>
+          <div class="actions">
+            <a class="btn" href="https://newsroom.intel.com/artificial-intelligence/intel-to-expand-ai-accelerator-portfolio-with-new-gpu" target="_blank" rel="noopener">Baca selengkapnya →</a>
+            <span class="meta">Sumber: Intel Newsroom</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 6: Android / Pixel update issue -->
+      <article id="software" class="card">
+        <div class="thumb">
+          <img alt="Ilustrasi bug aplikasi Pixel setelah pembaruan Android" src="https://i.ibb.co/Y8w7FYw/pixel-issue-oct-2025.jpg" />
+        </div>
+        <div class="content">
+          <div class="tagdate">
+            <span class="tag">Software</span><span class="date">20 Okt 2025</span>
+          </div>
+          <h2>Sejumlah Pengguna Pixel Laporkan Crash Aplikasi usai Update Oktober</h2>
+          <p class="desc">Laporan menunjukkan crash memengaruhi aplikasi Google dan pihak ketiga. Dugaan awal mengarah ke ketidakcocokan API antara sistem Android yang diperbarui dan Google Play Services.</p>
+          <div class="actions">
+            <a class="btn" href="https://android.gadgethacks.com/news/pixel-10-apps-crash-after-october-update-heres-why/" target="_blank" rel="noopener">Baca selengkapnya →</a>
+            <span class="meta">Sumber: GadgetHacks</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap" style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
+      <div style="color:var(--muted)">© 2025 TechNova — Dibangun dengan cinta untuk teknologi.</div>
+      <div style="display:flex;gap:10px">
+        <a class="btn" href="#ai">AI</a>
+        <a class="btn" href="#chip">Chip</a>
+        <a class="btn" href="#gadget">Gadget</a>
+        <a class="btn" href="#software">Software</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
