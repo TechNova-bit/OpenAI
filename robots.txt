@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://technova-bit.github.io/OpenAI/sitemap.xml
